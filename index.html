@@ -862,12 +862,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script type="module" src="/src/mcjs.js"></script>
   <script type="module" src="/src/gtag-init.js"></script>
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    gtag_report_conversion(this); // Pass the form element
-  });
-  </script>
+  <script type="module" src="/src/contact-form-handler.js"></script>
   <script type="module" src="/src/loader.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>

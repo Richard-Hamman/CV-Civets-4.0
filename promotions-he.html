@@ -131,7 +131,7 @@
   
   <section class="promotions" style="background: #246E8D;">
     <div class="box-container">
-      <div class="promotions-title">
+      <div class="promotions-hero-content">
         <h1>Starter Pack Promotion</h1>
         <p>Comprehensive CV writing, LinkedIn optimisation, and cover letter services tailored to meet International recruitment standards and applicant tracking system requirements.</p>
         <h2>Included in this package : </h2>
@@ -147,7 +147,7 @@
           <p>Now <br> R450</p>
         </div>
         <p class="save">Save R175</p>
-        <a href="./promotions.html#contact">Get A Quote</a>
+        <a class="btn" href="./promotions.html#contact">Get A Quote</a>
       </div>
       <div class="video-box">
         <video class="promo-video" autoplay loop muted>
@@ -317,12 +317,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script type="module" src="/src/mcjs.js"></script>
   <script type="module" src="/src/gtag-init.js"></script>
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    gtag_report_conversion(this); // Pass the form element
-  });
-  </script>
+  <script type="module" src="/src/contact-form-handler.js"></script>
   <script type="module" src="/src/loader.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>

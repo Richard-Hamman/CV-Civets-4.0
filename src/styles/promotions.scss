@@ -43,16 +43,14 @@ h3 {
     .box-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(80rem, 1fr));
-        height: 110vh;
         overflow: hidden;
+        padding: 0 2rem;
 
-        .promotions-title {
-            @include flex-center();
-            justify-content: flex-start;
+        .promotions-hero-content {
+            display: flex;
             flex-direction: column;
             text-align: center;
-            color: $white;
-            padding: 25% 1rem 0;
+            padding-top: 10rem;
 
             h1 {
                 padding: .5rem;
@@ -67,17 +65,8 @@ h3 {
                 font-size: 3rem;
 
                 li {
-                    position: relative;
-                    padding-left: 2.5em; // Space for the checkmark
-
-                    &::before {
-                    content: "✔"; // Unicode checkmark
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    color: $green; // Or any color you like
-                    font-size: 1.5em;
-                    line-height: 1;
+                    span {
+                        color: $green; // Or any color you like
                     }
                 }
             }
@@ -107,22 +96,30 @@ h3 {
                     }
                 }
             }
+            .save {
+                font-size: 5rem;
+                color: $white;
+                padding-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 5rem;
+            }
             p {
                 margin-top: 2rem;
                 font-size: 2.5rem;
             }
-            a {
-                margin-top: 2rem;
-                padding: .5rem 1rem;
-                color: $white2;
-                border-radius: $border-radius;
-                background: $purple;
-                margin-bottom: 2rem;
-                box-shadow: $box-shadow;
-            }
         }
         .video-box {
-        @include flex-center();
+            position: relative;
+
+            video {
+                position: absolute;
+                bottom: -12.5%;
+                left: 50%;
+                width: 73.5%;
+                height: 110%;
+                transform: translate(-50%,0%);
+            }
         }
     }
 }
