@@ -26,6 +26,8 @@
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon.png">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- Fonts and Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +41,14 @@
   <!-- Ionicons (if used in blog) -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Microsoft Clarity -->
+    <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/syc212cfgu";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "syc212cfgu");
+    </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGKLBTG66P"></script>
   
@@ -416,8 +426,10 @@
 <section class="contact" id="contact" aria-label="Contact Us">
   <div class="title">
     <h2><span>Contact</span> Us</h2>
+    <p>Please note that we are not a recruitment agency and do not source jobs for candidates;<br> we specialise solely in professional CV writing.<br> 
+      If you message us asking for a job, you won’t get a reply.</p>
   </div>
-  <form action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
+  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
     <fieldset>
       <input type="hidden" name="access_key" value="3cd5b66a-29cb-46a7-a7e6-1da2d449e54c">
       <input type="hidden" name="redirect" value="https://cvcivets.co.za/thank-you.html">
@@ -432,9 +444,11 @@
       <label for="number" class="sr-only">Contact Number</label>
       <input type="tel" id="number" name="number" autocomplete="tel" placeholder="Contact Number" required>
     </fieldset>
+
     <fieldset>
       <label for="message" class="sr-only">Message</label>
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Please type your message here..." required></textarea>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="How may we assist you today?" required></textarea>
+      <p>We are not a recruitment agency and we have <span><strong>NO JOB</strong></span> vacancies.</p>
       <button type="submit" class="btn">Send Message</button>
     </fieldset>
   </form>
@@ -535,10 +549,10 @@
   </span>
 </div>
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script type="module" src="/src/mcjs.js"></script>
-  <script type="module" src="/src/gtag-init.js"></script>
-  <script type="module" src="/src/contact-form-handler.js"></script>
+  
+  <!-- <script type="module" src="/src/mcjs.js"></script>
+  <script type="module" src="/src/gtag-init.js"></script> -->
+  <!-- <script type="module" src="/src/contact-form-handler.js"></script> -->
   <script type="module" src="/src/loader.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>

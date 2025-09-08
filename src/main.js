@@ -1,13 +1,21 @@
+// Analytics and tracking (independent, load first)
+// import './clarity-init.js';
+import './gtag-init.js';       // Google Analytics/Ads
+import './contact-form-handler.js'; // Contact form handler
+
+// CSS imports
 import 'normalize.css';
 import './styles/style.scss';
 import './styles/blog.scss';
 import './styles/promotions.scss';
 import './styles/articles.scss';
+
+// JS libraries
 import gsap from 'gsap';
 import Lenis from 'lenis';
-// import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
-// import styles bundle
+
+// Swiper styles
 import 'swiper/css/bundle';
 
 
@@ -210,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         scrollProgress.style.background = `conic-gradient(#ce375c ${scrollValue}%, #4a154b ${scrollValue}%)`;
     };
+    
     window.addEventListener('scroll', calcScrollValue);
     window.addEventListener('load', calcScrollValue);
 

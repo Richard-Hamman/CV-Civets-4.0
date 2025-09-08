@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      gtag_report_conversion(this);
+      if (typeof gtag_report_conversion === "function") {
+        gtag_report_conversion(this);
+      } else {
+        // fallback if gtag_report_conversion is not defined
+        this.submit();
+      }
     });
   }
 });
